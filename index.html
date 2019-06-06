@@ -4,7 +4,7 @@
 
    <head>
 
-     <title>Random Number Chooser and Coin Toss</title>
+     <title>Random Number, Coinflip, Die Role</title>
 
    </head>
 
@@ -44,6 +44,37 @@ function GetRandomNumberBetween(end)
           document.getElementById("coin").innerHTML = "Tails";
      }
      }
+     
+              function DiceRoll()
+     {
+         document.getElementById("die").innerHTML = "";
+     e = GetRandomNumberBetween(6);
+        if(e==6)
+        {
+          document.getElementById("coin").innerHTML = "6"; 
+     }
+     if(e==5)
+     {
+          document.getElementById("coin").innerHTML = "5";
+     }
+             if(e==4)
+        {
+          document.getElementById("coin").innerHTML = "4"; 
+     }
+     if(e==3)
+     {
+          document.getElementById("coin").innerHTML = "3";
+     }
+             if(e==2)
+        {
+          document.getElementById("coin").innerHTML = "2"; 
+     }
+     if(e==1)
+     {
+          document.getElementById("coin").innerHTML = "1";
+     }
+     }
+     
 </script>
 
    <p>
@@ -65,6 +96,8 @@ function GetRandomNumberBetween(end)
       </body>
 <body>
 <p>
-Dice Roll:
+Amount of Die:
 <input type=“button” onclick=“DiceRoll()” value=“Roll Dice”>
+   </p>
+   <p id="die"></p>
 </html>
