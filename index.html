@@ -4,7 +4,7 @@
 
    <head>
 
-     <title>Random Number, Coinflip, Die Role</title>
+     <title>Random Number, Coinflip, Die Role, and Hexi Decimal</title>
 
    </head>
 
@@ -28,7 +28,11 @@ function GetRandomNumberBetween(end)
      function GetRandomNumber()
      {
         var end = document.getElementById("end").value;
+        if(GetRandomNumberBetween(end)==100){
+           document.write("https://www.youtube.com/watch?v=V7CO3dYfKHs");
+        }else{
       document.getElementById("number").innerHTML = GetRandomNumberBetween(end);
+     }
      }
 
           function CoinFlip()
