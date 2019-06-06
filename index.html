@@ -61,6 +61,12 @@ function GetRandomNumberBetween(end)
   document.body.style.backgroundColor = color;
 }
          
+     function cS() { 
+    var HD3=#;
+    var HD4=document.getElementById("HD").value;
+        HD3=HD3+HD4;
+        document.body.style.backgroundColor = HD3;
+     }
 </script>
 
    <p>
@@ -88,5 +94,11 @@ function GetRandomNumberBetween(end)
       <input type="button" onclick="getRandomColor()" value"">
    </p>
    <p id="colorhere"></p>
+   <p>
+      Hexadecimal To Color:
+      <input type="text" id="HD" value="0">
+      <input type="button" onclick="cS()" value""
+   </p>
+   <p id=HD2></p>
    </body>
 </html>
