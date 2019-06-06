@@ -14,9 +14,9 @@
 
    Enter The Range To Calculate Your Number:      
 
-   <input type="text" id="start" value="0"> 
+   <input type="number" id="start" value="0"> 
 To
-   <input type="text" id="end" value="0">
+   <input type="number" id="end" value="0">
  
    </p>
 
@@ -31,7 +31,7 @@ function GetRandomNumberBetween(start,end)
      {
           var start = document.getElementById("start").value;
         var end = document.getElementById("end").value;
-      document.getElementById("number")[0].innerHTML = GetRandomNumberBetween(parseInt(start),parseInt(end))
+      document.getElementById("number").innerHTML = GetRandomNumberBetween(start,end);
      }
 
 </script>
@@ -42,7 +42,7 @@ function GetRandomNumberBetween(start,end)
 
    </p>
    
-  <p id="finalnumber"></p>
+  <p id="number"></p>
 
 </body>
 
