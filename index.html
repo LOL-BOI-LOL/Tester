@@ -28,7 +28,7 @@ function this_is_a_function()
    
         var x = document.getElementById("hi").value;
         var y = document.getElementById("hj").value;
-      document.getElementById("finalnumber").innerHTML = (Math.random() * (y - x + 1) + x) | 0;;  
+      document.getElementById("finalnumber").innerHTML = (Math.random() * ((max ? max : min) - (max ? min : 0) + 1) + (max ? min : 0)) | 0;  
 }
 
 </script>
