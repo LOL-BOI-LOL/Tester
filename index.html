@@ -1,57 +1,46 @@
-<!DOCTYPE HTML>
- <html>
+<!DOCTYPE html>
+
+<html>
+
    <head>
+
      <title>Random Number Chooser</title>
-    <h1>Your Random Number Is...</h1>
+
    </head>
-   <body>
+
+<body>
+
+<p>
+
+   Enter The Range To Calculate Your Number:      
+
+   <input type="number" id="hi" value="0";> 
+
+   <input type="number" id="hj" value="0">
+ 
+   </p>
+
+  <script>
+
+function this_is_a_function() 
+
+   {
+   
+        var x = document.getElementById("hi").value;
+        var y = document.getElementById("hj").value;
+      document.getElementById("finalnumber").innerHTML = Math.floor((Math.random() * y) + x);  
+}
+
+</script>
+
    <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 5) + 1))">1-5</button>
-    </p>
-  </body>
-  <body>
-       <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 10) + 1))">1-10</button>
-    </p>
-   </body>
-  <body>
-       <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 50) + 1))">1-50</button>
-    </p>
-  </body>
-  <body>
-       <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 100) + 1))">1-100</button>
-    </p>
-   </body>
-  <body>
-       <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 500) + 1))">1-500</button>
-    </p>
-   </body>
-  <body>
-       <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 1000) + 1))">1-1000</button>
-    </p>
-  </body>
-  <body>
- <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 5000) + 1))">1-5000</button>
-    </p>
-  </body>
-   <body>
- <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 10000) + 1))">1-10000</button>
-    </p>
-  </body> 
-  <body>
- <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) + 1))">1-Googol</button>
-    </p>
-  </body>
-   <body>
- <p>
-    <button type="button" onclick="document.write(Math.floor((Math.random() * (Math.pow(10,100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000))) + 1))">1-GoogolPlex</button>
-    </p>
-  </body>
+
+   <input type="button" onclick="this_is_a_function()" value="Calculate"> 
+
+   </p>
+   
+  <p id="finalnumber"></p>
+
+</body>
+
 </html>
