@@ -40,40 +40,15 @@ function GetRandomNumberBetween(end)
           document.getElementById("coin").innerHTML = "Heads"; 
      }
      if(e==1)
-     {
+      {
           document.getElementById("coin").innerHTML = "Tails";
      }
      }
      
-              function DiceRoll()
-     {
-         document.getElementById("die").innerHTML = "";
-     e = GetRandomNumberBetween(6);
-        if(e==6)
-        {
-          document.getElementById("die").innerHTML = "6"; 
-     }
-     if(e==5)
-     {
-          document.getElementById("die").innerHTML = "5";
-     }
-             if(e==4)
-        {
-          document.getElementById("die").innerHTML = "4"; 
-     }
-     if(e==3)
-     {
-          document.getElementById("die").innerHTML = "3";
-     }
-             if(e==2)
-        {
-          document.getElementById("die").innerHTML = "2"; 
-     }
-     if(e==1)
-     {
-          document.getElementById("die").innerHTML = "1";
-     }
-     }
+              function DiceRoll() {
+        document.getElementById("die").innerHTML = "";
+          document.getElementById("die").innerHTML = "e";
+     } 
      
      function getRandomColor() {
   var letters = '0123456789ABCDEF';
@@ -82,7 +57,7 @@ function GetRandomNumberBetween(end)
     color += letters[Math.floor(Math.random() * 16)];
   }
   document.getElementById("colorhere").innerHTML = color;
-  style="background-color:color;">
+  document.body.style.backgroundColor = color;
 }
          
 </script>
