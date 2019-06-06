@@ -34,10 +34,12 @@ function GetRandomNumberBetween(end)
           function CoinFlip()
      {
      e = GetRandomNumberBetween(2);
-        if(e=2)
+        if(e==2)
         {
           document.getElementById("coin").innerHTML = "Heads"; 
-     }else{
+     }
+     if(e==1)
+     {
           document.getElementById("coin").innerHTML = "Tails";
      }
      }
@@ -61,4 +63,3 @@ function GetRandomNumberBetween(end)
       <p id="coin"></p>
       <body>
 </html>
-   
