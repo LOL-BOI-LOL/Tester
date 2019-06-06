@@ -12,26 +12,23 @@
 
 <p>
 
-   Enter The Range To Calculate Your Number:      
-
-   <input type="number" id="start" value="0"> 
-To
+   Enter The Max Number:      
+   
    <input type="number" id="end" value="0">
  
    </p>
 
   <script>
 
-function GetRandomNumberBetween(start,end) 
+function GetRandomNumberBetween(end) 
    {
-   return Math.floor(Math.random()*(end-start+1))+start;
+   return Math.floor((Math.random() * end) + 1); 
 }
      
      function GetRandomNumber()
      {
-          var start = document.getElementById("start").value;
         var end = document.getElementById("end").value;
-      document.getElementById("number").innerHTML = GetRandomNumberBetween(start,end);
+      document.getElementById("number").innerHTML = GetRandomNumberBetween(end);
      }
 
 </script>
