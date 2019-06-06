@@ -75,6 +75,15 @@ function GetRandomNumberBetween(end)
      }
      }
      
+     function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  document.getElementById("colorhere").innerHTML = color;
+}
+     
 </script>
 
    <p>
@@ -95,9 +104,18 @@ function GetRandomNumberBetween(end)
       <p id="coin"></p>
       </body>
 <body>
+   <body>
 <p>
    Roll Dice:
 <input type="button" onclick="DiceRoll()" value"">
    </p>
    <p id="die"></p>
+   <p>
+   </body>
+   <body>
+      Get Random Color:
+      <input type="button" onclick="getRandomColor()" value"">
+   </p>
+   <p id="colorhere"></p>
+   </body>
 </html>
