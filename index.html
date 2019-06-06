@@ -46,8 +46,9 @@ function GetRandomNumberBetween(end)
      }
      
               function DiceRoll() {
-        document.getElementById("die").innerHTML = "";
-          document.getElementById("die").innerHTML = e;
+         document.getElementById("die").innerHTML = "";
+     var e=GetRandomNumberBetween(6);
+         document.getElementById("die").innerHTML = e;
      } 
      
      function getRandomColor() {
