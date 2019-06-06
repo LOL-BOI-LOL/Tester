@@ -4,7 +4,7 @@
 
    <head>
 
-     <title>Random Number Chooser</title>
+     <title>Random Number Chooser and Coin Toss</title>
 
    </head>
 
@@ -31,6 +31,16 @@ function GetRandomNumberBetween(end)
       document.getElementById("number").innerHTML = GetRandomNumberBetween(end);
      }
 
+          function CoinFlip()
+     {
+     e = GetRandomNumberBetween(2);
+        if(e=2)
+        {
+          document.getElementById("coin").innerHTML = "Heads"; 
+     }else{
+          document.getElementById("coin").innerHTML = "Tails";
+     }
+     }
 </script>
 
    <p>
@@ -42,6 +52,13 @@ function GetRandomNumberBetween(end)
   <p id="number"></p>
 
 </body>
-
+   
+   <body>
+      <p>
+         Coin Toss:
+          <input type="button" onclick="CoinFlip()" value="Flip Coin">
+      </p>
+      <p id="coin"></p>
+      <body>
 </html>
    
