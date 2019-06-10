@@ -22,60 +22,58 @@ Click to display the Date and Time.</button>
 
   <script>
 
-function GetRandomNumberBetween(end) 
-   {
-   return Math.floor((Math.random() * end) + 1); 
+function getRandomNumberBetween(start,end) {
+	var e = Math.floor(Math.random() * (end - start)+1) + start;
+  return e; 
 }
      
-     function GetRandomNumber()
-     {
-        var end = document.getElementById("end").value;
-        if(GetRandomNumberBetween(end)==100){
-           document.write("https://www.youtube.com/watch?v=V7CO3dYfKHs");
-        }else{
-      document.getElementById("number").innerHTML = GetRandomNumberBetween(end);
-     }
-     }
+function getRandomNumber() {
+    var end = Math.floor(document.getElementById("end").value);
+    var start = Math.floor(document.getElementById("start").value);
+  var e = getRandomNumberBetween(start,end);
+	if(getRandomNumberBetween(start,end)===100){
+		window.location.replace("https://www.youtube.com/watch?v=V7CO3dYfKHs");
+	}else{
+		document.getElementById("number").innerHTML = e;
+	}
+}
 
-          function CoinFlip()
-     {
-         document.getElementById("coin").innerHTML = "";
-     e = GetRandomNumberBetween(2);
-        if(e==2)
-        {
-          document.getElementById("coin").innerHTML = "Heads"; 
-     }
-     if(e==1)
-      {
-          document.getElementById("coin").innerHTML = "Tails";
-     }
-     }
+function coinFlip() {
+	document.getElementById("coin").innerHTML = "";
+	var e = getRandomNumberBetween(1,2);
+	if(e===2){
+		document.getElementById("coin").innerHTML = "Heads"; 
+	}else if(e===1){
+		document.getElementById("coin").innerHTML = "Tails";
+	}
+}
+
+function diceRoll() {
+	document.getElementById("die").innerHTML = "";
+	var e = getRandomNumberBetween(1,6);
+	document.getElementById("die").innerHTML = e;
+} 
      
-              function DiceRoll() {
-         document.getElementById("die").innerHTML = "";
-     var e=GetRandomNumberBetween(6);
-         document.getElementById("die").innerHTML = e;
-     } 
-     
-     function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  document.getElementById("colorhere").innerHTML = color;
-  document.body.style.backgroundColor = color;
+function getRandomColor() {
+	var letters = '0123456789ABCDEF';
+	var color = '#';
+	for (var i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+	}
+	document.getElementById("colorhere").innerHTML = color;
+	document.body.style.backgroundColor = color;
 }
          
-     function Hexa() { 
-    var HD4=document.getElementById("HD").value;
-        document.body.style.backgroundColor = HD4;
-     }
+function hexa() { 
+	var HD4=document.getElementById("HD").value;
+	document.body.style.backgroundColor = HD4;
+}
+      
 </script>
 
    <p>
 
-   <input type="button" onclick="GetRandomNumber()" value="Calculate"> 
+   <input type="button" onclick="getRandomNumber()" value="Calculate"> 
 
    </p>
    
@@ -83,13 +81,13 @@ function GetRandomNumberBetween(end)
   
       <p>
          Coin Toss:
-          <input type="button" onclick="CoinFlip()" value="">
+          <input type="button" onclick="coinFlip()" value="">
       </p>
       <p id="coin"></p>
 
 <p>
    Roll Dice:
-<input type="button" onclick="DiceRoll()" value"">
+<input type="button" onclick="diceRoll()" value"">
    </p>
    <p id="die"></p>
    <p>
@@ -101,7 +99,7 @@ function GetRandomNumberBetween(end)
    <p>
       Hexadecimal To Color:
       <input type="text" id="HD" value="0">
-      <input type="button" onclick="Hexa()" value"">
+      <input type="button" onclick="hexa()" value"">
    </p>
    </body>
 </html>
