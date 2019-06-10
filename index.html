@@ -17,7 +17,11 @@ Click to display the Date and Time.</button>
   <script>
 
 function getRandomNumberBetween(start,end) {
+	if(start===end) {
+		var e=start;
+	}else{
 	var e = Math.floor(Math.random() * (end - start)+1) + start;
+	}
   return e; 
 }
      
