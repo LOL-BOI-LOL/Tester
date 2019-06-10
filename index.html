@@ -20,7 +20,7 @@ function getRandomNumberBetween(start,end) {
 	if(start===end) {
 		var e=start;
 	}else{
-	var e = Math.floor(Math.random() * (end - start)) + start;
+	var e = Math.floor(Math.random() * (end - start)+1) + start;
 	}
   return e; 
 }
