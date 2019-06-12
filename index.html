@@ -20,7 +20,7 @@ function getRandomNumberBetween(start,end) {
 	if(start===end) {
 		var e=start;
 	}else{
-	var e = Math.floor(Math.random() * (end - start)+1) + start;
+	var e = Math.floor(Math.random() * (end - (start-1))+1) + (start-1);
 	}
   return e; 
 }
@@ -38,7 +38,7 @@ function getRandomNumber() {
 
 function coinFlip() {
 	document.getElementById("coin").innerHTML = "";
-	var e = getRandomNumberBetween(0,2);
+	var e = getRandomNumberBetween(1,2);
 	if(e===2){
 		document.getElementById("coin").innerHTML = "Heads"; 
 	}else if(e===1){
@@ -48,7 +48,7 @@ function coinFlip() {
 
 function diceRoll() {
 	document.getElementById("die").innerHTML = "";
-	var e = getRandomNumberBetween(0,6);
+	var e = getRandomNumberBetween(1,6);
 	document.getElementById("die").innerHTML = e;
 } 
      
