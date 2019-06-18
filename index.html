@@ -29,8 +29,8 @@ function getRandomNumber() {
     var end = Math.floor(document.getElementById("end").value);
     var start = Math.floor(document.getElementById("start").value);
   var e = getRandomNumberBetween(start,end);
-	if(getRandomNumberBetween(start,end)===100){
-		window.location.replace("https://www.youtube.com/watch?v=V7CO3dYfKHs");
+	if(start>end){
+		document.getElementById("number").innerHTML = "Invalid";
 	}else{
 		document.getElementById("number").innerHTML = e;
 	}
